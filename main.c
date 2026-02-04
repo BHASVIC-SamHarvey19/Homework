@@ -25,7 +25,12 @@ int main(void) {
 
     while (solved == 0) {
         printf("\n \n \n ");
-        printf("Player 1s turn:   \n\n");
+        if(player == 1){
+            printf("Player 1s turn:   \n\n");
+        }
+        else {
+            printf("Player 2s turn:   \n\n");
+        }
         printf("Current board: \n");
         printf(""
                "     |     |     \n"
@@ -172,14 +177,14 @@ int main(void) {
                     }
                     break;
                 case 9:
-                    if (h != 9) {
+                    if (i != 9) {
                         printf("Added!\n\n");
                         taken = 1;
                         if (player == 1) {
-                            h = 'X';
+                            i = 'X';
                         }
                         else {
-                            h = 'O';
+                            i = 'O';
                         }
                     }
                     else {
@@ -191,6 +196,7 @@ int main(void) {
                     break;
             }
     }
+        taken = 0;
         printf("\n\n\n");
         printf("Current board: \n");
         printf(""
